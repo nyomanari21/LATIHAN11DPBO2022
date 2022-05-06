@@ -7,6 +7,7 @@ include("includes/Peminjaman.class.php");
 include("includes/Buku.class.php");
 include("includes/Member.class.php");
 
+// buat objek yang dibutuhkan
 $peminjaman = new Peminjaman($db_host, $db_user, $db_pass, $db_name);
 $peminjaman->open();
 $peminjaman->getPeminjaman();
@@ -47,6 +48,7 @@ $dataBuku = null;
 $dataPeminjam = null;
 $no = 1;
 
+// menampilkan data peminjaman
 while (list($id, $nim, $nama, $id_buku, $judul_buku, $status) = $peminjaman->getResult()) {
     if ($status == "Sudah Dikembalikan") {
         $data .= "<tr>
@@ -77,6 +79,7 @@ while (list($id, $nim, $nama, $id_buku, $judul_buku, $status) = $peminjaman->get
     }
 }
 
+// proses menampilkan daftar buku dan member
 while (list($id, $judul, $penerbit, $deskripsi, $status, $id_author) = $buku->getResult()) {
     $dataBuku .= "<option value='".$id."'>".$judul."</option>
                 ";

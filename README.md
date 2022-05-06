@@ -14,6 +14,7 @@ Di dalam file Member.class.php terdapat method:
 <br>
 Ketika tombol edit di klik, tampilan member.html akan berubah, lalu data member yang diklik akan tersalin ke form yang selanjutnya akan diubah. Setelah tombol edit di form di klik, maka data member akan berubah dan tampilan member.html akan kembali ke tampilan awal.
 <br><br>
+
 ![Member](https://user-images.githubusercontent.com/90953569/167144164-ba571c5b-9dfe-4329-882d-7ac6f58f9b30.gif)
 <br><br>
 
